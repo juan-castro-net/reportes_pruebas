@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.1.0</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>org.usco</groupId>
+	<artifactId>uscoia</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>uscoia</name>
+	<description>Demo project for Spring Boot</description>
+	<packaging>war</packaging>
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+      		<groupId>org.springframework.boot</groupId>
+      		<artifactId>spring-boot-starter-web</artifactId>
+    	</dependency>
+    	<dependency>
+      		<groupId>org.springframework.boot</groupId>
+      		<artifactId>spring-boot-starter-test</artifactId>
+      		<scope>test</scope>
+    	</dependency>	  
+    	<dependency>
+			<groupId>org.springframework.boot</groupId>
+		   	<artifactId>spring-boot-starter-tomcat</artifactId>
+		   	<scope>provided</scope>
+		</dependency>  	
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jdbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports</artifactId>
+			<version>6.21.3</version>
+		</dependency>
+		
+	</dependencies>
+	
+	<build>
+		<finalName>uscoia</finalName> 
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			
+			<!-- 
+			<plugin>
+			    <groupId>org.codehaus.cargo</groupId>
+			    <artifactId>cargo-maven3-plugin</artifactId>
+			    <configuration>
+			        <container>
+			            <containerId>tomcat10x</containerId>
+			            <type>remote</type>
+			        </container>
+			        <configuration>
+			            <type>runtime</type>
+			            <properties>
+							<cargo.servlet.port>8080</cargo.servlet.port>
+			                <cargo.server.settings>tomcat-server</cargo.server.settings>
+			            </properties>
+			        </configuration>
+			    </configuration>
+			</plugin>
+			-->
+			
+		</plugins>
+	</build>
+
+</project>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="municipio" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c69b8faf-cd54-4f5a-a739-9d31a0d32d8e">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="bXVuaWNpcGlvICwxNSwxNSwxMWQ4ZTZmZS03MGQ5LTQxNmMtYjQyYi0yNTUwNGI5MjUyNmI7"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (2)"/>
+	<parameter name="departamentoId" class="java.lang.Integer"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT m.*, d.nombre as dnombre FROM municipio as m, departamento as d where m.departamento = d.id 
+and m.departamento = $P{departamentoId} order by m.nombre]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="municipio"/>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="municipio"/>
+	</field>
+	<field name="departamento" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="departamento"/>
+		<property name="com.jaspersoft.studio.field.label" value="departamento"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="municipio"/>
+	</field>
+	<field name="acronimo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="acronimo"/>
+		<property name="com.jaspersoft.studio.field.label" value="acronimo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="municipio"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="-14" y="0" width="100" height="30" uuid="1d3a4eb4-1e24-4c24-8705-35f8d1e11c86">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ae883417-bd90-4035-96f5-9d980828cad6"/>
+				</reportElement>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="96" y="0" width="100" height="30" uuid="f6357665-358c-4234-8bef-9e84235c01d1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2f829c74-d576-4137-8211-57b65eee7daa"/>
+				</reportElement>
+				<text><![CDATA[nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="305" y="0" width="100" height="30" uuid="7f987ea2-17b4-4fc6-af24-93f295563057">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b12302f0-1d01-4555-a8e4-3bfdb5b65bb0"/>
+				</reportElement>
+				<text><![CDATA[acronimo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="-14" y="13" width="100" height="26" uuid="d57d6de7-09e4-4125-ab8c-f1fb454d8e16">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ae883417-bd90-4035-96f5-9d980828cad6"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="96" y="14" width="204" height="24" uuid="b0f4b413-14bc-4c1c-b6a6-db4bd80e46cc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2f829c74-d576-4137-8211-57b65eee7daa"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="305" y="15" width="100" height="22" uuid="72f7372d-afd4-41f2-8ce4-db11cb06a840">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b12302f0-1d01-4555-a8e4-3bfdb5b65bb0"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{acronimo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
